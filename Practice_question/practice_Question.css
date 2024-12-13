@@ -1,0 +1,222 @@
+
+/* Question 1: facebook  */
+/* 
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    color:#1b74e4; 
+}
+
+#searchbtn{
+    background-color: black;
+    color: white
+}
+
+/* #login{
+    background-color: aqua;
+} 
+
+.userbtn{
+    background-color: aqua;
+}
+
+ */
+
+  /* 
+  Question 2 : Set the color paragraphs inside divs with the id "myId" to green--> 
+  
+  *Here are Valid ways following --> all are correct : 
+*/
+/* 
+  div [id = "myId"]{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  div[id]{
+    color: green;
+  }
+
+  div p{
+    background-color: aqua;
+  }
+
+  div > p{
+    text-decoration: underline;
+  } 
+    
+*/
+
+/* Question 3: Priority: for the Given html & css what is bg-color of p:
+ */
+/* 
+-prio: 0, 0, 2  = 2
+div p{
+  background-color: black;
+}
+
+-prio : 0, 1, 0 = 10
+.para {
+  background-color: yellow;
+}
+
+-prio : 0, 0, 1 = 1
+p{
+  background-color: green;
+} 
+  
+
+Question 4: For the given html & css code, what is color of text "Hello World": 
+
+*/
+/* -- prio : 0, 2, 1 = 21
+div.greetDiv .greet{
+  color: green; 
+}
+
+-- prio : 0, 2, 1= 21
+.greetDiv p.greet{
+  color:blue; 
+}
+
+-- prio : 0, 2, 0 = 20
+.greetDiv .greet {
+  color: red; 
+} */
+
+/* ----------------------------------------------------------- */
+
+
+/*Question 5: Recreate the following elements using given css. --> */
+
+ /* #outer{
+  height: 200px; 
+  width: 70px; 
+  border: 2px solid black;
+ }
+
+ .inner{
+    height: 50px;
+    width: 50px;
+    border: 2px solid black; 
+    margin:10px;
+    border-radius:50px; 
+ }
+
+ #red{
+  background-color: red;
+ }
+
+ #yellow{
+  background-color: yellow;
+ }
+
+ #green{
+  background-color: green;
+ }
+
+
+*/
+
+/* -Assignment css_part_3-------------------------------------------------------------------------------------------------------------------- */
+/* Q1. Create a box using div. Set  */
+ 
+/* div{
+  height: 150px;
+  width: 300px; 
+  background-color: grey;
+  border:5px black dotted; 
+  margin: 20px 1em 40px 2em; 
+  padding: 1em; 
+}  */
+
+  /*Question 2: create 3 dives with following properties : */ 
+   
+
+/* .box{
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+  border: 2px solid black;
+  border-radius: 100%; 
+  display: inline-block;
+}
+ */
+
+/* Question 3: Create a list of technologies- */
+/*  list-style-position: inside doesn't work well with display: inline 
+   because inline elements don't support list item markers like bullets. 
+   To achieve the result of showing bullets while keeping the list inline, 
+   you'll need to use inline-block instead of inline. */
+/* li {
+  display: inline-block;      
+} */
+
+ul {
+  display: flex;         /* Make the list a flex container */
+  list-style-type: disc; /* Show bullets */
+  padding-left: 20px;    /* Adjust left padding for bullets */
+}
+
+li {
+  margin: 20px 20px;    /* Space between items */
+  /* margin-left: 20px; */
+}
+
+/* ------------------------------------------------------------ */
+/* Assignment: css_nextStep_part 4------------------------------- */
+/*Qs1. Add a 2 s transition on box1 for width changes. It should have 'eace-in' speed curve & 0.5x delay */
+
+#box1{
+  width: 100px; 
+  height: 100px;
+  background: green;
+}
+
+#box1:hover{
+  width: 600px; 
+  transition: 2s;
+}
+
+/* Question2 : Using transform, move box2 200px to the right & 200px down. Also rotate it 90deg */
+
+#box2{
+  width: 100px; 
+  height: 100px;
+  background: red; 
+  transform: translate(200px,200px) rotate(90deg);
+}
+
+/* Q3: Using transform, skew box3 20deg along the x axix.  */
+
+#box3{
+  width: 100px; 
+  height: 100px;
+  background: lightblue; 
+  transform: skewX(30deg ); 
+}
+
+/* Q4: set a 2px horizontal & 2px vertical, green shadow for box4, with a 5px blur radius. */
+
+#box4 {
+  width: 100px; 
+  height: 100px; 
+  background: lightgreen; 
+  box-shadow: 4px 4px 100px green;
+}
+
+/*Qs5.Set Your picture or any picture as the background of the div "myPic".Also, set transparency of this div to 50%. */
+#myPic{
+  width: 200px; 
+  height: 200px;
+  background: pink; 
+  background-image: url("html_css_Jss.jpg");
+  background-size: cover; 
+  opacity: 50%
+}
+
+#myPic:hover{
+  opacity: 100%;
+}

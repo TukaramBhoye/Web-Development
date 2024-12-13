@@ -1,0 +1,392 @@
+/* Chapter :3: Intermediate CSS : 
+
+*1: box Mode in css: 
+
+       _________________________                  _________________________      
+      |     <----width--->      |                |                         |
+      | ^   ________________    |                |                         |
+      | |H |                |   |                |                         |
+      | |i |                |   |                |                         |
+      | |g |    content     |   |<--Margin--->   |                         |
+      | |h |                |   |                |                         |
+      | |t |________________|   |                |                         |
+      |          | padding      |                |                         |    
+      |__________|______________|                |_________________________|
+    Border-
+
+
+    *i: Height : By default, It sets content area height of the element 
+            div{
+                height: 100px; 
+            } 
+
+    *ii: Border Property : used to set an element's border
+            - Border-width
+            - border-style--> dotted, wavy, double line, dashed
+            - border-color
+
+    *iii: Border Shorthand: 
+            width|styel|color
+
+            div {
+                border: 2px solod blue; 
+            }
+
+    *iv : Border Sides : To control an individual side of the box : 
+            - border-left
+            - border-right
+            - border-top 
+            - border-bottom
+    
+    *v:  Border Radius : Used to round the corners of an element's outer border edge
+        *MDN:
+            div {
+                border-radius: 15px; 
+            }
+
+            div {
+                border-radius: 15px; 
+            }
+        
+    *vi: Padding: 
+        - Padding-left
+        - padding-right
+        - padding-top
+        - padding-bottom
+
+        div{
+                padding-left: 50px; 
+            }
+    *vii: padding shorthand : 
+        #a: for all 4 sides 
+            padding: 50px; 
+        #b: top & bottom | left & right
+            padding: 1px 2px; 
+
+        #c: top|left &  right | bottom
+            padding: 1px 2px 3px; 
+        
+        *clockwise(top, right bottom, left) ;
+        #d: top|right|bottom|left
+            padding: 1px 2px 3px 4px; 
+
+    *viii: Margin: To set spacing on the outside of border: 
+
+            - margin-left
+            - margin-right
+            - margin-top
+            - margin-bottom
+        
+*2: Inline v/s Block 
+    i:  Block Elements-----------------
+       - Takes up the full-width available(whole block) : 
+       - Start with new Line 
+       
+    ii: Inline elements : 
+        - Takes up only necessary width
+        - Don;t start from new line 
+
+----------Block -----------------------------Inline-----------
+- Always start on a new line           :- Do not start on a new line 
+- Take up as much horizontal space     :- Only use as much horizontal space as  
+  as possible (the full width of the   : required by the content.
+  container or browser window if there : Do not accept width and height CSS properties.
+  is no container                      :
+- will respect width and height CSS    : - Margins will work horizontally, but not vertically
+  properties                             : - padding works on all sides, but the top and bottom 
+- Horizontal and vertical margin both work: may overlap other elements. 
+  
+
+
+    *i: Display : 
+        - It sets whether an element is treated as a block or inline
+        element and the layout used for its children 
+
+            display : inline  
+            display : block 
+            display : inline-block  <----------behave like inline elements
+            display : none <-----hide blocks or elements 
+
+*3: Units in CSS : 
+
+Absolute   | Relative
+           |         ___
+    px     |   %        |
+    pt     |  em        |-------use mostly 
+    pc     |  rem    ___|
+    cm     |  ch
+    mm     |  vh
+    in     |  vw + many more 
+
+*i: Percentage(%) 
+    - It is often used to define a size as relative to an element;s parent object
+    eg: - width: 33.33% // Relative to the parent
+        - Margin-left: 50% // Relative to the parent size: 
+
+
+
+*ii: Em : Relative to : 
+        em :- Font size of the parent, in the case of typographical(text related prop) properties like 
+             font-size, and font size of the element itself, in the case of other properties like width. 
+    
+    -  DrawBack Of em : Snowball effect in nested elements :
+    
+*iii: Rem(Root Em) :to avoid Drawback of em snowball effect in nested elements : 
+                    
+        Unit : Relative to 
+        rem : font size of the root elements. 
+
+        - For an HTML document, the root element is <html>. So , rem will work according to that. 
+        - Here, 
+            font-size is changing based on <html>, not <section>. 
+
+
+
+
+             */
+
+
+/* div{
+    height: 200px;
+    width:500px; 
+    background-color: pink; */
+    /* border-width: 5px;
+    border-style : solid; 
+    border-color: black;  */
+  /* Three properties in one */
+    /* border: 5px solid black;  */
+
+    /* border-left-color: yellow;
+    border-right-color: red ;
+     border-top-style:dotted; 
+    border-bottom-style:dotted; 
+
+    border-top: 5px dashed yellow;  */
+
+    /* border-radius:10px; */
+    /* border-radius:50%
+    border-radius: 100%; <----circle  */
+    /* individually corner style:   */
+    /* border-top-right-radius: 50px; */
+
+    /* padding-top : 10px; */
+
+    /* margin-bottom: 25px;  */
+    /* margin: 25px;  
+
+}
+*/ 
+
+/* h1{ */
+    /* border-width: 2px; 
+    border-style: dotted;
+    border-color: green; */
+
+    /* border : 2px dotted green; 
+    margin :0;     
+} */
+
+
+/* border individual sites-- */
+/* 
+button{
+    border: 2px solid black; 
+    border-radius: 10px; 
+
+    /* clockwise */
+    /* padding:0 30px 0 30px;  */
+    /* padding-left: 25px;  */
+    /* background-color: yellow;  */ 
+    /* padding-right: 25px;  
+}
+ -------------------------------- */
+/*Question 5 Trafic light: Recreate the following elements using given css. --> 
+
+ #outer{
+    height: 200px; 
+    width: 70px; 
+    border: 2px solid black;
+   }
+  
+   .inner{
+      height: 50px;
+      width: 50px;
+      border: 2px solid black; 
+      margin:10px;
+      border-radius:50px; 
+   }
+  
+   #red{
+    background-color: red;
+   }
+  
+   #yellow{
+    background-color: yellow;
+   }
+  
+   #green{
+    background-color: green;
+   } */
+
+
+/* --------------------------------- */
+
+/* Display  */
+/* h2{
+    display: inline;
+    background-color: pink;
+}
+
+.para{
+    display:block;
+    background-color: yellow;
+} */
+
+/* .spann{
+     background-color: yellowgreen; 
+    border: 2px solid black; 
+    // ignore : 
+    height: 100px; 
+    width: 200px;  */
+
+    /* here padding and margin apply on just rightSide or leftSide not top and bottom */
+    /* padding: 50px; 
+    margin:20px;  
+}*/ 
+
+/* .divv{
+    background-color: yellowgreen; 
+    border: 2px solid black; 
+    height: 100px; 
+    width: 200px; 
+
+    padding: 50px; 
+    margin:20px; 
+} */
+
+/* #divv{
+    height : 200px; 
+    width : 200px; 
+    background-color: yellowgreen;
+    border: 2px solid black; 
+    margin: 5px ;  */
+    /* display: inline; <--- here just apply margin on left right -> otheres properties failed. 
+    use --> display: inline-block; */
+    /* display: inline-block;
+} */
+
+/* hide block or inline elements */
+
+
+/* Units :  */
+/* h1{
+    border: 2px solid black; 
+    width:50%; 
+
+}
+
+#outer {
+    height: 400px; 
+    width: 400px; 
+    background-color: pink;
+    margin: 50px; 
+}
+
+#inner{
+    height: 100px;
+    width: 110px;
+    background-color: cornflowerblue;
+    margin-left: 10%; // 400 of 10% ==40px  <---set according to the outer  
+} */
+
+/* em:  */
+
+/* #outer{ 
+    height: 400px;
+    width: 400px; 
+    border: 2px solid black;
+    background-color: pink;
+    font-size: 20px;
+}
+
+#inner{
+    height: 100px;
+    width: 100px; 
+    background-color: cornflowerblue;
+
+    font-size: 0.5em; //in reverse direction decrease
+    padding: 1em; 
+    // font-size: 2em; // font become double of outer20px == 40px  
+
+}
+
+button{
+    font-size: 50px;
+    border-radius: 15px;
+    border: 5px solid greenyellow;
+   // padding-left: 20px;
+    padding-right: 20px;//
+    padding-left: 1em;  
+    padding-right: 1em;  // increase according to the font size 
+} */
+
+/* drawback Of em : - For an HTML document, the root element is <html>. So , 
+                      rem will work according to that. 
+                - Here, 
+                    font-size is changing based on <html>, not <section>.   */
+
+/* section{
+    font-size: 15px; 
+}
+div{
+    //font-size: 0.5em; 
+    font-size: 2em;    
+} */
+
+
+/* -Assignment css_part_3-------------------------------------------------------------------------------------------------------------------- */
+/* Q1. Create a box using div. Set  */
+ 
+div{
+    height: 150px;
+    width: 300px; 
+    background-color: grey;
+    border:5px black dotted; 
+    margin: 20px 1em 40px 2em; 
+    padding: 1em; 
+  } 
+  
+    /*Question 2: create 3 dives with following properties : */ 
+     
+  
+  .box{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 100%; 
+    display: inline-block;
+  }
+  
+  
+  /* Question 3: Create a list of technologies- */
+  /*  list-style-position: inside doesn't work well with display: inline 
+     because inline elements don't support list item markers like bullets. 
+     To achieve the result of showing bullets while keeping the list inline, 
+     you'll need to use inline-block instead of inline. */
+  /* li {
+    display: inline-block;      
+  } */
+  
+  ul {
+    display: flex;         /* Make the list a flex container */
+    list-style-type: disc; /* Show bullets */
+    padding-left: 20px;    /* Adjust left padding for bullets */
+  }
+  
+  li {
+    margin: 20px 20px;    /* Space between items */
+    /* margin-left: 20px; */
+  }
+  
+  

@@ -1,0 +1,85 @@
+/* <!-- Chapter 14: Css Bootstrap --> */
+
+/* <!-- 
+*1: What is Bootstrap? 
+-> "Bootstrap is a powerful, feature-packed frontend toolkit. 
+    Build anything-from Prototype to production-in minutes."
+
+*2: Benefits of Bootstrap 
+    1: Makes Development faster & Easier 
+    2: Good choice of pre-built components 
+    3: good Browser Compatibility 
+
+    *CDN : Content Delivary Network 
+
+*3: What will we cover? 
+    ---Components---------------------|--Layout-----------
+    - Prebuilt and reusable piece of  | - Overall structure and arrange-
+        user interface(UI)            |   ment of the element 
+     eg- button, forms                | eg-container, grid
+
+*4: Container Layout : 
+    - Container are used to contain, pad, and (sometimes) center the
+      content within them. 
+ 
+*5: Components : Badges : 
+        use to show lable or counts. example mail box messages lable  
+
+        Example heading New ==> large - size button 
+        Example heading New ==> less than prev
+        Example heading New ==> less than prev
+        Example heading New ==> less than prev
+        Example heading New ==> less than prv 
+        Example heading New ==> small
+       
+
+                
+*6: Componenet : Alert :  pop-ups like 
+
+*7: componenet: Button Group : 
+
+*8: componenet: Navbar : 
+        Ex: Navbar | home | features | Pricing | About  ---search | 
+
+*9: Components :i: Cards : 
+      -  Some quick example text to build on the card title and make up bulk of the card's content.
+
+      - content type : 
+        body,
+
+*ii: Grid : 12 column system  [1|2|3|4|5|6|7|8|9|10| 11|12]
+        - without cntainer class wi can't make Grid : 
+
+    *a)Grid(column) Vertical Alignment : 
+
+*10 : Forms :
+        - Form Controls 
+        - Select 
+        - Checkbox & Radio
+        - Layout
+
+        - mb-3= margin bottom - 3 
+
+
+    
+
+
+
+
+
+
+
+--> */
+
+/* .container-fluid{
+    background-color: yellow;
+} */
+
+/* .btn-info{
+    background-color: pink;
+} */
+
+/* .btn-close{
+    text-align: right;
+} */
+

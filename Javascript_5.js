@@ -140,7 +140,7 @@
     Math.E            Math.Pow(a,b) 
                       Math.floor(n) <-- removes decimal choose nearest/smallest Int val
                       Math.ceil(n)  <-- larger Integer value same as floor but always chhose greater val ex 5.001 => 6
-                      Math.random() -- 0 to 9 value randomely print. excluding 1 
+                      Math.random() <-- 0 to 9 value randomely print. excluding 1 
     
 *3: Random Integers  :
         from   1 to 10 

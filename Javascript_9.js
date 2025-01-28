@@ -182,8 +182,7 @@ Download Starter files: https://drive.google.com/drive/folders/18G_CAxxjofKdUDVk
         <div class=​"box">​…​</div>​
       - h4.children
         HTMLCollection []length: 0[[Prototype]]: HTMLCollection
-      
-      
+
 
       - let ul = document.querySelector('ul'); 
       
@@ -255,11 +254,11 @@ Download Starter files: https://drive.google.com/drive/folders/18G_CAxxjofKdUDVk
       - here paragraph will move afterbegin, afterend, beforebigin, beforeend,
         let p = document.querySelector('p'); 
        
-        p.insertAdjacentElement('beforebegin', btn); 
+      - p.insertAdjacentElement('beforebegin', btn); 
         <button>​NEW BUTTON !!!​</button>
-        p.insertAdjacentElement('afterbegin', btn); 
+      - p.insertAdjacentElement('afterbegin', btn); 
         <button>​NEW BUTTON !!!​</button>​
-        p.insertAdjacentElement('beforeend', btn); 
+      - p.insertAdjacentElement('beforeend', btn); 
         <button>​NEW BUTTON !!!​</button>​
         
 *11. Removing Elements :
@@ -361,7 +360,40 @@ div.append(para2);
 div.classList.add("box"); 
 document.querySelector("body").append(div);  
 
+// Assignment question -----------------
+// Question 1 : create a new input and button on the page using javaScript only. Set the text of button to "click me". 
+
+let button = document.createElement("button");
+let input  = document.createElement("input"); 
+button.innerText = "Hi i am button";
+
+document.querySelector("body").append(button); 
+document.querySelector("body").append(input); 
 
 
+/* Question 2 : 1) Change placeholder value of input to "username"
+             2) Change the id of button to "btn"  */ 
+
+input.setAttribute("placeholder", "username");
+button.setAttribute("id", "btn");  
+
+/* Q3. Access the btn using the querySelector and button id. Change the button background color to blue and text color to white. 
+*/
+let btn = document.querySelector("#btn"); 
+btn.classList.add("btnStyle"); 
+
+/* Q4 : Create an h1 element on the page and set its text to "DOM Practice"underlined. Change its color to purple. 
+*/ 
+
+let h = document.createElement("h1"); 
+h.innerText = "DOM Practice";
+h.classList.add("addUnd");
+document.querySelector("body").append(h);  
+
+let p1 = document.createElement("p"); 
+p1.innerText = " ApnaCollege <b> Delta</b> Practice"; 
+p1.classList.add("boldT"); 
+
+document.querySelector("body").append(p1); 
 
 

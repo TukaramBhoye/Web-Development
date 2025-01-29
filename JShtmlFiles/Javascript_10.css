@@ -1,0 +1,16 @@
+/* Chapter 10 : DOM Events */ 
+
+body{
+    text-align: center;
+     /* display: flex; */
+    justify-content: center; 
+}
+
+div{
+    height : 100px; 
+    width: 500px;
+    border: 1px solid black; 
+    margin: 20px;
+    justify-content: center; 
+
+}

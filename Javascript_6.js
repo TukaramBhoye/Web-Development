@@ -201,8 +201,8 @@
             console.log("hello"); 
         }
         greet(); 
-        greet() ; 
-        greet() ; 
+        greet(); 
+        greet(); 
 
         function multipleGreet(func, count){
             for(let i=1; i<=count; i++){

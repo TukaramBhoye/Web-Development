@@ -1,9 +1,10 @@
 /* Chapter 10 : DOM Events */ 
-
+/* 
 body{
     text-align: center;
-     /* display: flex; */
+    //display: flex; 
     justify-content: center; 
+    
 }
 
 div{
@@ -11,6 +12,12 @@ div{
     width: 500px;
     border: 1px solid black; 
     margin: 20px;
-    justify-content: center; 
+} */
 
+/* Event Listener for elements */
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 1px solid black;
 }

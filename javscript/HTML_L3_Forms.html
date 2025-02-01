@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>- Forms : </h1>
+    <p>- Action Attribute : is used to define what needs to be performed when a form is <br>submitted or the form data
+        should be sent</p>
+    <p> - <-form action="/action.php" ---> (file name put here) > <br> - <-form action="/action"></p>
+    <!-- action : Form Submit केल्यानंतर काय Action perform झाली पाहिजे त्यासाठी आहे. kontya url var janar ahe address -->
+    <h1> Form elements </h1>
+
+    <h3>1: Input elements & Placeholder Attribute :</h3>
+    <p>- used to create multiple form controls <br>
+        - there are multiple types of inputs that can be created using type attribute <br>
+        - there are 20-25 diffrent-different types. and we can recreate them using single one(input)
+
+    </p>
+    <hr>
+    <form action="/action">
+        <input> <br>
+        <input type="text" placeholder="enter username"> text <br>
+        <input type="password" placeholder="enter password">password<br> <!--sensitive information -->
+        <input type="numbers"> number<br> <!--number information -->
+        <input type="time">time<br>
+        <input type="color"> color <br>
+        <p><b>MDN : For multiple input types search</b> </p>
+
+        <hr>
+        <h1>Lables : </h1>
+        <p>-Label element represent a caption for an item in a user interface</p>
+        <label>
+            Enter Your username : <!--represent a connection between text and iput type
+         ex: when we click on text input box is highlight-->
+            <input type="text" placeholder>
+        </label>
+
+        <h1>Forms element </h1>
+        <p><b>- Label classical Approach : </b> <br>
+            - id attribute : unique name : <!-- mhanje ki jar eka input la ek id dili tr dusryala apan same id nahi devu shakat  <br>
+        - kontya pan element la apan id gheu shakto. -->
+        </p>
+        <div>
+            <label for="username">Username</label>
+            <input type="text" placeholder="enter username" id="username" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="text" placeholder="enter username" id="password" />
+        </div>
+
+        <div>
+            <label for="age">Enter Age: </label>
+            <input type="number" placeholder="age" id="age" />
+        </div>
+
+
+        <h1>Button Element</h1>
+        <!-- different Types of buttons  -->
+        <button type="submit"> submit</button> <br>
+        <button type="button"> not click </button><!-- not click automatic because we exlipcitely done button -->
+        <button type="reset">refresh data</button>
+
+        <h2>Input Element: button Using input : </h2>
+        <p>Not good way to create buttons in input element: alwasy try with buttons </p> <br>
+        <input type="button" value="click me">
+        <input type="submit" value="click me b2">
+
+        <hr>
+
+    </form>
+    <hr>
+    <form action="/server">
+        <h1>Name Attribute : </h1>
+        <div>
+            <p>- Name of the form control. Submitted with the form as part of a name/value pair</p> <br>
+            <label for="name">name: </label>
+            <input type="text" placeholder="enter name" id="name" name="name" />
+            <!-- name Attribute : आपण नेहमी टाकतो कारण backend  मध्ये accesible असावा. -->
+        </div>
+
+        <div>
+            <label for="password">Password: </label>
+            <input type="text" placeholder="enter username" id="password" name="password" />
+        </div>
+        <button>submit</button>
+        file:///C:/server?name=tukaram&password=tukaram+ : unsafe(data shown on site url) --> http protocall learn after
+    </form>
+    <hr>
+
+    <!-- original Link : https://www.youtube.com/results?search_query=google -->
+    <form action="https://www.youtube.com/results">
+        <p>- what we search will related subject open in youTube</p>
+        <input type="text" placeholder="you tube serch" name="search_query">
+        <!-- <input type="text" placeholder="you tube search" name ="search_q"> will no result  -->
+
+        <button>search</button>
+    </form>
+    <hr>
+
+    - Assignment Question 1 :Create a search option that redirects its search requests to google
+    <!-- https://www.bing.com/search?q=google.com -->
+    <form action="https://www.bing.com/search">
+        <p>- Search on google ---> what you want </p>
+        <input type="text" placeholder="search on google" name="q">
+        <button>search</button>
+    </form>
+    <br>
+    <hr>
+    <form action="/server">
+        <h1>Input element : checkbox : </h1>
+        <p>- MDN : serach checkbox </p>
+        <input type="checkbox" name="age" id="age" checked>
+        <label for="age">I am 23+</label>
+        - if checkbox already checked: "/server?age=on "
+        - if not : /server? <!--server is form action name-->
+
+        <div>
+            <h1>Radio Button : </h1>
+            <p>MDN : Search on </p>
+            <label for="Apple">Apple</label>
+            <input type="radio" name="fruit" id="Apple" value="Apple" />
+            <label for="mango">mango</label>
+            <input type="radio" name="fruit" id="mango" value="mango" />
+            <label for="banana">banana</label>
+            <input type="radio" name="fruit" id="banana" value="banana"> <br>
+            <p><b>- grouped : here name used to grouped multiple radio buttons</b></p>
+            <p><b>- value: here value use send value with fruit (on url display) </b></p>
+        </div>
+        <br>
+        <div>
+            <b>- choose your subjects
+                - choose multiple not like radio
+            </b>
+            <input type="checkbox" name="subjects" id="math" value="math">
+            <label for="math">math</label>
+
+            <input type="checkbox" name="subjects" id="marathi" value="marathi">
+            <label for="marathi">marathi</label>
+
+            <input type="checkbox" name="subjects" id="english" value="english">
+            <label for="english">english</label>
+        </div>
+
+        <button>submit</button>
+
+        <hr>
+    </form><br>
+
+    <form action="/server">
+        <h1>Select Element: DropDown </h1>
+        <h3>MDN : search On site</h3>
+
+        <div>
+            Choose Your profession
+            <select name="profession" id="profession">
+                <option>Select your Option </option>
+                <option value="student">Student</option>
+                <option value="Dev" selected>Developer</option> <!-- Preselected-->
+            </select>
+        </div>
+        <h1>Range input Element</h1>
+        <label for="volume">Select volume</label>
+        <input type="range" id="vol" min="0" max="100" name="volume" step="10" />
+        <!-- step : increase by 10  -->
+
+        <button>Submit</button>
+        <br>
+        <hr>
+
+        <h1>Text Area </h1>
+        <p>-takes input as text : </p>
+        <textarea></textarea> <br>
+        <label for="feedback">Please Give your valuable feedback : </label>
+        <textarea id="feedback" rows="5" cols="20" placeholder="write Your feedback "></textarea>
+        <button>Submit</button>
+    </form>
+
+    <hr>
+    <h3>Q. recreate the following form with suitable elements & input types </h3>
+
+    <form action="/action">
+        <h1>Registration Form </h1>
+        <div>
+            <input type="text" placeholder="first Name" name="fname"> <br/> <br/>
+            <input type="text" placeholder="last Name" name="lname"> <br/> <br/>
+        </div>
+        <div>
+            <label for="gender">please select gender</label>
+            <select name="gender" id="gender">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="o">others</option>
+            </select>
+        </div>
+        <br/> <br/>
+        <div>
+            Do You Agree to all terms of service?
+            <input type="checkbox" id="tos_agree" name="tos_agree">
+            <label for="tos_agree">Yes i agree</label>
+        </div>
+        <br/> <br/>
+        <button>Register</button>
+        <!--after submit:  file:///C:/action?fname=jkdf&lname=scn&gender=m&tos_agree=on -->
+    </form>
+    <hr>
+    <h1>Assginment Questions </h1>
+    <!-- Question 1 : recreate the following table using HTML ->look in first part -->
+
+    <!-- Question 2: recreate the following form using HTML : -->
+    <h3>Question : 2</h3>
+
+    <form action="/action">
+        <div>
+            <label for="fname">Name: </label>
+            <input type="text" name="fname">
+        </div>
+        <div>
+            <label for="gender">Sex : </label>
+            <input type="radio" name="gender" id="male" value="male"> 
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="women" value="female"> 
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" id="other" value="other"> 
+            <label for="other"></label>
+        </div><br /> <br />
+        <div>
+            <label for="Country">Country: </label>
+            
+            <select name="country" id="country">
+                <option>Select An Option </option>
+                <option value="India" id="Contry">Nepal</option>
+                <option value="USA" id="Contry">USA</option>
+                <option value="nepal" id="Contry">nepal</option>
+                <option value="Canada" id="Contry">Canada</option>
+                <option value="England" id="Contry">England</option>
+            </select>
+        </div> <br/><br/>
+        <div>
+            <label for="Message">Message:</label><br>
+            <textarea name="Message" id="Message" rows="3" cols="30"></textarea>
+        </div>
+        <input type="checkbox" name="newsletter" id="newsletter">
+        <label for="newsletter">Subscribe ? </label> <br/><br/>
+        <button>Submit</button>
+    </form>
+<hr>
+
+    <!-- Question 3: Recreate the following form using HTML:  -->
+    <h3>Question 3: </h3>
+    <form action="/action">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Write your name"/> 
+            <br/> <br/>
+            <label for="mail">Email: </label>
+            <input type="text" name="mail" placeholder="write your email"/>
+            <br/> <br/>
+        </div>
+
+        <div>
+            <label for="ftext">Message: </label> <br>
+            <textarea name="ftext" rows="3" cols="30" ></textarea>
+        </div>
+        <br/> <br/>
+        <div>
+            <label for="rating">Rate us our of 5: </label> <br/>
+            <input type="radio" name="rating"id="rating" value="one"/> 
+            <label for="one">1</label><br/>
+            <input type="radio" name="rating" id="rating" value="two"/>
+            <label for="two">2</label><br/>
+            <input type="radio" name="rating" id="rating" value="three"/>
+            <label for="three">3</label><br/>
+            <input type="radio" name="rating" id="rating" value="four"/>
+            <label for="four">4</label><br/>
+            <input type="radio" name="rating" id="rating" value="five"/>
+            <label for="five">5</label><br/>
+        </div>
+        <br/> 
+        <button>Send Your Message</button>
+    </form>
+
+</body>
+
+</html>

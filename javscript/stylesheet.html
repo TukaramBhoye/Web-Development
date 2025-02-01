@@ -1,0 +1,139 @@
+<h1>CSS : Cascading style Sheet : </h1>
+<p>It is a language that is used to describe the style of a document</p>
+<hr>
+
+<!--
+<h2>1: Basic Format Of CSS</h2>
+
+
+selector
+  | 
+ h1{ 
+    color :   red ;  (;)<- shows a pair end
+      |        |   
+    property  Value 
+
+ }
+ Search for available Properties for css :  ==> MDN references site :
+---------------------------------------------------
+2: first : How to Include Styles? 
+    i: Inline Style <br>
+     Writing style directly inline on each element
+
+Syntax: <h1 style = "color:red"> Apna Collage </h1>
+
+    ii: second way : Using <style> tag  
+        style is addeed using the <style> element in the same document
+
+            <style>
+                h1{
+                    color: red;
+                }
+            </style> 
+        - also this is not prefer for development although we can do with this 
+          we not use ; 
+
+    iii: third way: External Stylesheet :  most use way to add css : 
+         - Writing CSS in a separate document & linking it with HTML file
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Chapter</title>
+
+    <!--second  -->
+    <!-- <style>
+        h1{
+            color:red; 
+            background-color: aqua;
+        }
+    </style> -->
+    <!-- Rel = Relation   Href = ekmekanshi जोडलेले मजकूर darshavta. (एक गलीतुण दुसऱ्या गलीत घेऊन जातो) -->
+    <link rel="Stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- 1: for large scale is not good  -->
+    <!-- <h1 style="color:rgb(208, 150, 23)">Tukaram's Garage</h1>
+    <h1 style="color:rgb(208, 150, 23)">Tukaram's Garage</h1>
+    <p style="color:rgb(20, 160, 247)">this is oaragraph  </p>
+    <button style="color: blue; background-color: rgb(219, 231, 9);" >Help</button> 
+    -->
+
+    <!--2:  Style Tag  
+     <h1>Tukarams Garage</h1>
+    <h1>Hello World</h1>
+    <p>This is Paragraph 1</p>
+    <p>This is Paragraph 2</p>
+    <button>Button 1</button>
+    <button>Button 2</button> 
+    -->
+
+    <!--
+     Practice : 1:  Write CSS for these Element According to the 
+     Given style guideline. 
+    
+
+    <h1>Hi There!</h1> 
+    <p>My name is Tom & I am there to help you. </p>
+    <button>Need Help</button>
+-->
+
+    <!-- <h1>Iron man</h1>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, expedita officiis. Excepturi mollitia odit porro, ducimus incidunt sed ratione expedita deleniti, libero culpa sapiente maxime eum exercitationem est nisi minima.</p>
+
+   <h2>publication history </h2>
+   <p><a href="google.com">google me</a>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque consectetur possimus voluptatibus, voluptatem illo at dolorum exercitationem nulla quo quaerat itaque quisquam magni aliquam eos, repellat esse voluptas totam. Earum?</p>
+    
+<h3>premire</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repudiandae aperiam unde ab quas dolore nesciunt optio eligendi, nostrum in sequi provident minus autem aspernatur eos impedit. Ducimus, velit eveniet?</p>
+
+<h3>Solo Series</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet animi tempore, nulla ea unde ab itaque quam beatae qui! Quo, illum ipsam illo placeat quaerat eaque quasi pariatur obcaecati?</p>
+
+<h2>Fictional Character Biography : </h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis maiores quod nihil dolorum assumenda commodi! Rem repellat reiciendis deserunt suscipit tempora quibusdam, nemo placeat dicta assumenda incidunt eius, nulla enim! -->
+
+    <!--Practice  Question : Design the given Apna Collage logo using CSS instruction
+  <h2>Apna<br />Collage</h2> -->
+
+
+    <!-- Assignment Questions: css part1 -->
+    <div style="background-color: wheat">
+        <h2>Ozymandias</h2>
+        <h3>by Percy Bysshe Shelley </h3>
+
+        <p style="color: #964B00; line-height: 30px;">I met a traveller from a nantique land, <br /> who said- "Two vast and trunkless legs of stone<br />
+            Half sunk a shattered visage lies, whose frown, <br />
+            Tell that its sculptor well those passion read <br />
+            which yet survive, stamped on these lifeless things, <br />
+            The hand that mocked them, and the heart that fed; <br />
+            And on the pedestal, these words appear: <br />
+            My name is <span>Ozymandias</span>, King og King; <br />
+            Look on my works, ye Mighty, and despair! <br />
+            Nothing beside remains. round the decay <br />
+            Of that colossal Wreck, boundless and bare <br />
+            The lone and level sands stretch far away. " <br />
+        </p>
+
+        <hr />
+
+        <h4>Read up more about the poem on
+            <a href="https://en.wikipedia.org/wiki/Ozymandias"> Wikipedia</a>
+        </h4>
+
+        <textarea placeholder="Leve your comment here....."></textarea>
+
+        <br /> <br />
+        <button>Comment</button>
+
+    </div>
+</body>
+
+</html>

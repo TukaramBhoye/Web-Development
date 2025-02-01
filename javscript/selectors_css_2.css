@@ -1,0 +1,282 @@
+/* Chapter 8: Selectors in css:  use to choose individual element to changes  */
+
+
+/**Note: Try color pallets from internet for colors to best view : sites name 1) My Color Space 2: colors  
+
+*1: (*) Universal Selector : to select everything in a document: 
+       
+            *{
+                font-family:'Courier New', Courier, monospace
+            }
+
+/*
+*2:  multiple elements same color--> h1 & h3 
+        h3, h1{
+        color:#e95111;  
+        }
+*/
+
+/*
+*3: Id selector= #(case sensitive class & id name): choose unique/single element 
+  - Selects an element base on the value of the element's id attribute: 
+    
+    #myId{
+            prop : val; 
+        } 
+*4: Class Selector(.):
+    - Selects an element based on their class attribute : 
+    - Use for : select elements according us like body, div, p. 
+        .myClass{
+            prop : val; 
+        } 
+
+*5: Descendant Selector: Eg : Selects all Paragraph inside divs: 
+          descendent means : ek ke andar ek : jaise div ke andar paragraph
+        
+        div p {
+             prop: val; 
+        }
+*6: Child Combinator : Selects all buttons which are direct children of spans : 
+       
+        span > button {
+            prop: val
+        }
+
+*7: Adjacent Sibling Combinator 
+    Eg : Heading3 that comes immediately after any paragraph 
+
+        p + h3{
+            prop : val
+        }
+
+*8: Attribute Selector : Selects elements based on the presence or value of a given attribute : 
+ inpute[attr = "value] {
+            prop : value ; 
+        }
+    *MDN : some more variations search attribute 
+
+*9: Pseudo class : 
+    - A keyword added to a selector that specifies a special state of the selected elements(s) 
+     : hover
+     : active 
+     : checked 
+     : nth-of-type: MDN- good property search about 
+
+*10: Pseudo Elements :
+    - A keyword added to a selector that lets you style a specifix part of the selected lements
+
+    ::first-letter
+    ::first-line
+    ::selection
+
+
+*11: CSS : Cascading StyleSheet : 
+   - What is Cascade in CSS? 
+   - The CSS cascade algorithm's job is to select CSS declaration in order to determine the correct values
+     for CSS properties. 
+
+     h2{
+        background-color: yellow; 
+    }
+    //*for same specificity of elements-> last element will get priority 
+    //* also same for css files last added file will get priority or the same selectors 
+    h2{
+        background-color : blue 
+
+*12: Selector Specificity : 
+    -  Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration .
+    
+*   - priority in css specificity: 
+       I:  InllineStyle >> id >> class >> element
+       ii:  more Selectors > less selector --> jitna jyada css element utni priority.
+       iii: if spcificity same => cascading (means which element comes last will get priority) 
+    *Example : 1:
+    h1{
+        color: blue;
+    } 
+
+     Score --> ____0_____        ____0____     _____1_____  ==> 001 = 1
+                id              class,          element &         
+                                attribute &     pseudo- 
+                                pseudo-class    element 
+
+    *example : 2 : 
+     //* hover is pseudo class :
+
+    .myClass:over {
+       color : blue; 
+    } 
+         Score --> ____0_____       ___2____     _____0_____  ==> 020 = 20
+                    id              class,          element &         
+                                    attribute &     pseudo- 
+                                    pseudo-class    element 
+   *here Score 020 is 20 times strong than first example 
+
+
+
+*13: Inline Specificity: 
+        - Inline styles are more specific than id : 
+         Score -->__________ ____0_____        ____0____     _____1_____  ==> 
+                   Inline       id              class,          element &         
+                     style                      attribute &     pseudo- 
+                                                pseudo-class    element 
+
+
+
+*14: !important(high priority) : To show the most specifix thing in document
+
+    h2{
+        background-color: blue; 
+
+    }
+
+*15: Inheritance : when we not applie to changes of css to the child element that automatically inherit from parent 
+
+
+*/
+
+* {
+    font-family: 'Courier New', Courier, monospace
+}
+
+h3,
+h1 {
+    color: #e95111;
+}
+
+#login {
+    background-color: white;
+}
+
+#signup {
+    background-color: #e95111;
+}
+
+.upvote {
+    background-color: green;
+    color: white;
+}
+
+/* descendent Selector:  here apply on just anchor tag : p---->a */
+/* p a{
+    color: purple; 
+    background-color: yellow;
+} */
+
+/*here apply on just anchor tag : .post---->a   class points to a*/
+.post a {
+    color: purple;
+    background-color: yellow;
+}
+
+nav ul li a {
+    color: hotpink;
+}
+
+nav ul li {
+    color: rgb(234, 27, 27);
+}
+
+/* Adjacent Sibling Combinator : neigbor element */
+
+p+h3 {
+    text-decoration: underline;
+}
+
+.upvote+button {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/* descendent is better than this : there we can choose multiple elements 
+here we can just two element   */
+div>input {
+    background-color: darksalmon;
+    color: white;
+}
+
+
+/* Attribute selector : all are valid 
+*MDN : some more variations search
+*/
+input[type="text"] {
+    color: red
+}
+
+input[type="password"] {
+    color: green;
+}
+
+input[type] {
+    background-color: ghostwhite;
+}
+
+/* *pseudo class :   */
+button:hover {
+    color: White;
+    background-color: black;
+}
+
+
+button:active {
+    background-color: palevioletred;
+    color: black
+}
+
+p:active {
+    font-weight: bold;
+    color: green;
+}
+
+input[type="radio"]:checked+label {
+    color: red;
+}
+
+/* here 2 is Nth number. i choose second number paragraph  */
+/* .post:nth-of-type(2){
+    background-color: blanchedalmond;
+} */
+
+div:nth-of-type(2n) {
+    background-color: blanchedalmond;
+}
+
+h1::first-letter {
+    color: green;
+}
+
+p::first-line {
+    color: purple;
+}
+
+p::selection {
+    background-color: yellowgreen;
+}
+
+/* !important=> High priority  */
+h3 {
+    background-color: antiquewhite !important;
+}
+
+/* Inheritance : 
+ div{
+    background-color: yellow;
+}
+ 
+form{
+    background-color: red;
+} 
+
+input{
+    background-color: inherit;
+}
+
+button{
+    background-color: inherit;
+}
+
+button:hover{
+    background-color: red;
+} */
+
+/* Try color pallets from internet : 1) My Color Space 2: colors  */

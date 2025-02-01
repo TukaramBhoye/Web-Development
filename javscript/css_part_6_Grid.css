@@ -1,0 +1,332 @@
+
+/* CHapter : CSS_part_6_Grid : -------------------------------------- */
+/*
+*1: CSS Grid: Setting a Container's display to grid will make all children grid items. 
+             
+        container{
+            display : grid; 
+        }
+
+*2: Grid Model : grid layout make in 2D form 
+                Column lines 
+         L1      L2        L3       L4       L = Grid Lines
+         L1_|________|________|________|__   _
+            |GridCell|        |        |       |
+         L2_|________|________|________|__     |
+            |        |        |        |       |
+         L3_|________|________|________|__     |------Row Lines 
+            |        |        |        |       |
+         L4_|________|________|________|__   _ |
+            |        |        |        |
+             ________
+                | 
+            GridTrack : space between two lines 
+
+
+*3: Grid Remplate: 
+    - They define the lines & track sizing. 
+        Grid-template-rows 
+        Grid-teplate-columns : 
+
+*4: Grid Template : 
+Repeate is used to divide all available space : 
+    - 1fr => 1 fraction of 100% width 
+
+    - grid-template-rows: repeat(count, 1fr)
+    - grid-template-columns: repeat(count, 1fr)
+
+    - grid-template-rows: repeat(2, 1fr)
+    - grid-template-rows: 1fr 1fr 
+
+*5: Grid Gaps: 
+    - They define the gaps betweem the lines 
+
+    - row-gap
+    - column-gap 
+    - grid-gap: rowGap columnGap 
+
+*6: Grid Columns : 
+    - Define an item's starting  & ending position inside the column
+
+    grid-column-start: line_number
+    grid_column_end: line_number
+
+    grid-column: start_col / end_col
+    grid-column: start_col/ span number : 
+
+*7: Grid Rows : Defines an items starting & ending position inside the row ;
+    grid-row-start: line_number
+    grid-row-end: line_number
+
+    grid-row: start_col / end_col
+    grid-row: start_col/ span number :
+    
+*8: Common Properties : 
+                                        _
+        - justify-items : (container )   |___Horizontal
+        - justfy-self (item)            _|
+                                 _
+        - align-items(container)  |___Vertical
+        - align-self (item)      _| 
+
+        - place-items
+        - place-self  
+
+        self means ===> individual property
+        
+*9 : inline Grid : 
+        *Note: जर कधीपण आपण grid तयार केली आणि त्याला inline element  सारख 
+         डिस्प्ले कराव वाटते तर आपण ग्रिड च्या ठिकाणी आपण त्याच्या inline प्रॉपर्टी ला inline-grid म्हणून assign करू शकतो
+
+
+*10:css Animations : To animate CSS elements : 
+             _______> anyName give to animation 
+            |
+    @keyFrames myName{
+        from {font-size: 20px; } <--- initial val 
+        to { font-size: 40px; } <--- final val
+    }
+
+*CSS Animation :- animation-name
+                - animation-duration
+                - animation-timing-function
+                - animation-delay
+
+                this is new --> 
+                - animation-iteration-count
+                - animation-direction
+     
+    *i:  % in Animation : 
+     
+        @keyframe myName {
+            0%{font-size: 20px; }
+            50%{font-size: 30px; }
+            100{ font-size: 40px; }
+        }
+
+*11: Media Quesries : Help create a responsive website : 
+
+    *i:   media features- width(of viewport) 
+        @media(width: 400px){
+            div{
+             background-color: red; 
+            }
+        }
+            landscape = horizontal 
+            portrate = vertical 
+            viewPort = browser all screen seen 
+
+            *search : MDN- Media features  
+     
+    *ii: Media Queries: also we can setup min-width & max-width 
+        Use-Mostly : 
+    
+        @media(min-width: 400px){
+            div{
+             background-color: red; 
+            }
+        }
+    
+        @media(max-width: 400px){
+            div{
+             background-color: red; 
+            }
+        }
+       
+        *iii: Media QueriesO: rientation (of viewport): 
+
+            @media(orientation: landscape) {
+                div{
+                    background-color: red; 
+                }
+            }
+
+*12: z-index : It decides the stack level of elements
+        - Overlapping elements with a larger z-index cover those with a smaller one. 
+
+   
+        z-index : auto(0)
+        z-index :1/2/.....
+        z-index: -1/-2/.....
+
+        *to apply z-index the element position should not static or default 
+
+*/
+
+
+.container{
+    width: 600px;
+    height: 300px; 
+    background-color: rgb(245, 245, 5);
+    display: grid; /*by default flex direction is row */
+    
+    /* sapn element : for inblock element import outer element aside */
+    display: inline-grid;
+  /* grid-template-rows: 70px 60px 60px 60px;
+     grid-template-columns: 100px 100px 100px;
+     grid-template-columns: auto auto auto auto; -->Not Prefer for auto */
+
+     /* grid-template-rows: repeat(3, 1fr);  */
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-template-columns: repeat(3, 1fr); 
+     /* row-gap: 10px; 
+     column-gap: 30px; */
+     grid-gap: 10px ;
+
+     justify-items: center; 
+    align-items: center;
+}
+
+.item{
+    /* coment for grid repeat(3, 1fr) :*/  
+     width: 100px; 
+    height: 50px; 
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* <div class = "item one" >  */
+.one {
+    /* background-color: aqua;
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    
+    same write -->*/
+    grid-column: 1/4;
+    grid-column: 1/span 2;
+}
+
+.one{
+    place-self: center;
+}
+
+.two{
+    grid-row-start: 1; 
+    grid-row-end: 3;
+
+    /* short form  */
+
+    grid-row: 1/4; 
+    grid-row: 1/ span 3; 
+}
+/* --------------------------------------- */
+
+.box{
+    height: 100px;
+    width: 300px; 
+    background-color: pink;
+    animation-name: widthAnimation; 
+    /* animation-duration: 3s; 
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: infinite; */
+
+    /* within a single line */
+    animation: colAnimate 7s ease-in 0s infinite normal; 
+}
+/* bluePrint just  */
+@keyframes tukaram{
+    from{ font-size: 20px};
+    to{font-size: 40px};
+}
+
+@keyframes colourAnimate{
+    from{
+        background-color: greenyellow;
+    }to{
+        background-color: blue;
+    }    
+}
+
+@keyframes widthAnimation{
+    from{
+        width: 10px;
+        background-color: aqua;
+    }to{
+        width: 400px;
+        height: 400px;
+        border-radius: 100%;
+    }
+
+}
+
+@keyframes colAnimate{
+    0%{
+        background-color: green;
+    }50%{
+        background-color: #fb0c0c;
+    }100%{
+        background-color: blue;
+    }
+}
+
+
+h1{
+    background-color: yellowgreen;
+    border: 2px solid green; 
+}
+
+/* the will change when browser dimensinon become 400px  */
+@media(width: 400px){
+    h1{
+        background-color: red;
+        color: white;
+    }
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+    }
+}
+@media(min-width: 700px){
+    h1{
+        background-color: #5eff00;
+        color: white;
+    }
+   
+}
+@media(max-width: 200px){
+    h1{
+        background-color: #ff0080;
+        color: white;
+    }
+   
+}
+@media(min-width: 200px)and(max-width: 300px){
+    h1{
+        background-color: #dbf576;
+        color: rgb(216, 43, 170);
+    }
+   
+}
+
+@media(orientation: landscape){
+    h1{
+        background-color: aqua;
+        color: brown; 
+    }
+}
+
+/* --------------------------------- */
+
+.box{
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    background-color: pink;
+}
+
+.one{
+    background-color: aqua;
+    position: relative;
+    z-index: 1;
+    z-index: -1;
+}
+
+.two{
+    background-color: darksalmon ;
+    position: relative;
+    bottom: 50px;
+    z-index: 0; 
+}

@@ -1,0 +1,48 @@
+#mainTopic{
+    color: blue;
+}
+
+*{
+    text-align: center;
+}
+
+h1, h3, h5 {
+    font-style: georgia;
+}
+
+.parent{
+    color: white;
+    background-color: cornflowerblue;
+}
+
+div button{
+    background-color: purple;
+    color: azure;
+}
+
+button:hover{
+    background-color: yellow;
+    color: blue;
+}
+
+p:nth-of-type(2n){
+    color:yellow;
+}
+
+h1:first-letter{
+    color: red;
+}
+
+#yes:checked+label{
+    color:darkgreen;
+}
+
+/*  Order rules by Priority : 
+                            id  cls   el
+          - #mainContent   (1,    0,   0)= 100
+          - div .main      (0,    1,   1) = 11
+          - .main          (0,    1,   0) =  10
+          - h1             (0,    0,   1) = 1 
+
+ */
+

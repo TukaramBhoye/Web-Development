@@ -1,0 +1,73 @@
+/*
+body {
+  font-family: Arial;
+  text-decoration: underline black wevy; 
+}
+
+.green{
+  color: green; 
+}
+
+.underline {
+  text-decoration : underline purple wavy; 
+}
+
+#mainImg {
+  width: 35%;
+}
+
+.box {
+  border: 0.25px solid black;
+  background-color: lightgray;
+  width: 200px;
+  padding: 1rem;
+}
+
+.yellowBg{
+  background-color: yellow;
+}
+
+.boxLink {
+  text-decoration: none;
+}
+
+.oldImg {
+  height: 200px;
+  width: 200px;
+  margin-right: 1rem;
+}
+
+#description {
+  background-color: antiquewhite;
+}
+*/
+/* Assiginment:  */
+.red{
+  color: red;
+}
+
+.blue{
+  color: blue;
+}
+
+.box{
+  border: 1px solid black; 
+  background-color: pink;
+}
+
+/* Ass : Qs3 */
+
+.btnStyle{
+  background-color: blue;
+  color : white; 
+}
+
+/* Q4 */
+.addUnd{
+  text-decoration: underline purple wavy;
+}
+/* Q5 */
+.boldT{
+  font-weight : bold; 
+  
+}

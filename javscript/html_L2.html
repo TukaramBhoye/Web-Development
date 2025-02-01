@@ -1,0 +1,144 @@
+<!--1:  Inline V/S Block  -->
+<!-- 
+i: --Block Elements  ---------------------Inline Elements ----
+ 
+- Takes up the full-width available :  Takes up only necessarry width 
+  (Whole block)                     :  
+- Start from new line               :  Don't start from new line 
+
+- width need or not the but they occupy:   not occupy whole line 
+ whole line.                          : 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Vs BLock</title>
+</head>
+
+<body>
+    <h1>Hello world</h1> <!-- block element : take whole space of this line -->
+    <p>Appa collage </p>
+
+    <a href="facebook.com"> facebook</a> <!-- Inline element takes less space as by need -->
+
+    <img src="thh.jpg" alt="" /> <!-- inline element -->
+    <img src="thh.jpg" alt="" /s> <!-- both img appear in same line  -->
+
+    <p> <- --------------------------------------------------------------- -></p>
+
+    <!-- 
+    2: Div Element : 
+    - Div is a container used to hold other HTML elements or group elements together 
+    - It is a block element.
+    - everywhere Use: 
+    -->
+    <div>
+        <a href="www.facebook.com"> facebook</a>
+        <a href="www.google.com">google </a>
+    </div> <!-- Grouped -->
+
+    <a href="www.youtube.com"> youtube</a> <br>
+
+    <!-- 
+    3 :Span : 
+    - span is also a generic container used to hold other Html elements or group elements together. 
+    - It is an inline Elements.
+    spans Example --- > Quora Website inspect करके देख there names are use with span 
+    -->
+    <span>
+        <a href="www.facebook.com"> facebook</a>
+        <a href="www.google.com">google </a>
+    </span> 
+    <a href="www.youtube.com"> youtube : inline element ke andar hu mai </a> <br>
+
+    <p>4: HR Tag-------------------------------------</p>
+    <hr>
+    <p>my teacher name is shradhha Khapra she is my webdevelopment teacher</p>
+    <p>I learn  Development with apna collage </p>
+    <hr>
+
+    <hr>
+    <P>5: -SubScript & SuperScript------------------------</P>
+    <h1> 
+        H<sub>2</sub>0
+        <h1>a<sup>2</sup></h1> <!-- nested tags: tags into tags ---------  -->
+    </h1>
+<hr>
+    <!--6: Practice quetions:   -->
+    <p>i: Print the following on the screen using h1 heading element</p>
+
+    <h1>Pythagoras theorem says a<sup>2</sup> + b<sup>2</sup>= c<sup>2</sup></h1>
+    <h1>Formula for glucose is C<sub>6</sub>H<sub>H12</sub>O<sub>6</sub></h1>
+
+    <hr>
+
+    <p>7: Semantic Markup:
+        - it is the markup that realtes to the meeaning of content
+        semantic : ज्यांना बघताच लक्षात येईल ते : h1, p, img, <br>
+        non-Semantic : div, span  <br> 
+
+        i: meaningful layout-> Structure <br> 
+        ii: Seo friendly: Search engine Optimization: <br> 
+        iii:readable : semantic perform better help of semantic Markup <br>  
+
+        Some also semantic tags : which use once on page  <br>
+
+        <header> header tag</a> </header>
+        <Main>main tag </Main> <!--Main content in this -->
+        <footer>Footer tag</footer> <!--At the bottom of the page-->
+        <nav> Navigation : navigate to another page: mostly add in header tag</nav> 
+
+        <article> </article>
+        <section>Section: Div & span like work: but according to meaning here add sub related contend   </section> 
+        <aside>related link/content with bind </aside> <!--supposeमला अशाची माहिती द्यायचीय की जे डायरेक्ट्लि रेलटेड नाहीये. 
+        यामुळे समजते की हा याच्याशी घेणदेण नाही वेगळा कंटेंट आहे रेलटेड Ex: mdn left side topic links -->
+
+    </p>
+
+    <!-- <header>
+        Apna collage
+        <nav> 
+            <ul>
+                <li><a href="/About/html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+    <P>addd semantic markup to your Portfolio <a href="List.html">Portfolio</a></P>
+
+
+    <p>--8: HTML entities :   --</p>
+         <h1>&bigstar; <--uinicode </h1>
+         <h2>this is a &#9733; decimal<--uinicode to Decimal take from mdn and find on google(dec) </h2> 
+        <h1>a<b</h1>
+        <h1>a &lt; b ->less than</h1>
+        <h1>a &gt; b ->greater than</h1> 
+        <h3>a &amp;b</h3>
+        <h3>a &quot;b</h3>
+        <h1>&hearts;</h1>
+        <p>if here we give spacess        Not supports automatically detect</p>
+        <p>apna &nbsp;&nbsp;&nbsp;&nbsp;<--spaces non-breaking-space  </p> 
+        
+        <p>HTML entities : 
+            - An Html entity is a piece of text("string") that begins with an (&) and ends with a semicolon(;).<br>
+            - used to display reserved haracter (which would otherwise be interpreted as HTML code), and invisible <br>
+            characters (like non-breaking space). <br>
+            - can also use in place of characters that are difficult to type with a standard keyboard. <br>
+            - browser interprets them & renders correct character <br>
+
+        </p> -->
+
+ <!-- Question: Practice Qs 5: Print the following on the screen using an<h1> heading element and entities
+    *search for suitable cloud & rain entities  -->
+
+    <P>The sky is cloudy &#9729;  & it will rain &#9748; today </P>
+    <hr> 
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* h1{
+    color : blue; 
+    background-color: chartreuse;
+}
+
+body {
+    background-color: pink;
+}
+
+button{
+    background-color: blue;
+    color:white; 
+}
+.box { 
+    height: auto;
+    width: auto;
+    border: 1px solid magenta;
+    background-color: yellowgreen;
+}
+
+#box { 
+    height: auto;
+    width: auto;
+    border: 1px solid magenta;
+    background-color: yellowgreen;
+}
+.content{
+    color:rebeccapurple;
+} */
+.dark {
+    background-color: black;
+    color: white;
+}
+.light {
+    background-color: white;
+    color: black;/* text color  */
+}

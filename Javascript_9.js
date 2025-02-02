@@ -1,5 +1,5 @@
 /* 
-*24: JAvascript_9 : DOM(Document Object Model)
+*24: JAvascript_9 : DOM(Document Object Model)------------------
 
 *1: DOM(Document Object Model)
   - The DOM represent a document with a logical tree. 

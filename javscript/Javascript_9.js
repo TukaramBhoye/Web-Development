@@ -40,13 +40,12 @@ Download Starter files: https://drive.google.com/drive/folders/18G_CAxxjofKdUDVk
     *ii: getElementsByClassName 
           - Returns the Elements as an HTML Collection(not Array) or empty Collection(if not found)  
         
-    *iii: getElementByTegName 
+    *iii: getElementByTagName 
       - Returns the Elements as an HTML Collections or empty collections(if not found)
         
           document.getElementsByTagName("p"); // tags : p, i, b, body, span...& more
           HTMLCollection(2) [p, p#description, 
                             description: p#description]
-
 
 *5: Query Selector : 
     - Allows us to use any CSS selector :
@@ -98,177 +97,12 @@ Download Starter files: https://drive.google.com/drive/folders/18G_CAxxjofKdUDVk
       background-image   : backgroundImage 
       border-bottom      : borderBottom
 
-    - Examples :
-
-    - to all anchor tags 
-      let links = document.querySelectorAll('.box a'); 
-      for(link of links ){
-        link.style.color = "red"; //inline css
-      }
-
-    - to h1 first element : 
-      let heading = document.querySelector('h1'); 
-      heading.style; 
-      heading.style.color = 'purple'; 
-      heading.style.color = 'green' ;
-      heading.style.backgroundColor = 'yellow';
-
-      console.dir(heading); 
-        
-*9 : ClassList Property 
-  - Manpulating Style using classList 
-  obj.classList 
-  
-  i.classList.add() to add new classes 
-      
-  Examples : 
-      let heading = document.querySelector('h1');
-    - heading.classList.add('green'); 
-      undefined
-    - heading.classList.add('underline'); 
-      undefined
-
-  ii.classList.remove() to remove classes 
-    - heading.classList.remove('green'); 
-      undefine
-    - heading.classList.remove('greem'); 
-      undefine
-
-    *at the setAttribute just can one class value could remain.  means either we take value of 'green' OR 'underline'
-    - heading.setAttribute('class', 'green'); 
-      undefine
-
-      if you want to create multiple class and assign values all of them that time we always use classList for styling because using setAttribute as older value(means all values will convert single class value)
-  iii. classList.contains() to check if class exists 
-      - heading.classList.add('underline'); 
-        undefined
-      - heading.classList
-        DOMTokenList(2) ['green', 'underline', value: 'green underline']
-      - heading.classList.contains("underline"); 
-        true
-  iv. classList.toggle() to toggle between add & remove 
-    - toggle means ==> if press yes become no if no then yes. (ex. 0 or 1 state)
-
-    example: 
    
-
-    - heading.toggle("green");
-      error==> toggle is not function 
-    - heading.classList.toggle("green"); 
-      true
-    -  heading.classList
-       DOMTokenList(2)['underline', 'green', value: 'underline green']
-
-    - heading.classList.toggle("underline"); 
-      false   // remove underline 
-
-    v. styling Reset : 
-
-        let box = document.querySelector(".box"); 
-        undefined
-        box.classList; 
-        DOMTokenList ['box', value: 'box']
-        undefined
-        box.classList.add(".yellowBg"); 
-        undefined
-        box.classList;
-        DOMTokenList(3) ['box', 'yellowBg', '.yellowBg', value: 'box yellowBg .yellowBg']
-
-    
-*10: Navigation : 
-    i: ParentElement
-      - let h4 = document.querySelector('h4'); 
-      - h4.parentElement
-        <div class=​"box">​…​</div>​
-      - h4.children
-        HTMLCollection []length: 0[[Prototype]]: HTMLCollection
-
-
-      - let ul = document.querySelector('ul'); 
       
-      - ul.childElementCount; 
-        3
-      - ul.children
-        HTMLCollection(3) [li, li, li]
-      - ul.children[1]; 
-        <li>​…​</li>​
-      - ul.children[2]; 
-        <li>​…​</li>​
-      - ul.children[1].previousElementSibling;
-        <li>​…​</li>​
 
-      
-    ii: children 
-
-      - let box = document.querySelector('.box'); 
-        box.children;
-        HTMLCollection(2) [h4, ul]0: h41: ullength: 2[[Prototype]]: HTMLCollection
-
-      - box.childElementCount
-        2
-
-    iii: PreviousElementSibling / nextElementSibling
-
-      - let img = document.querySelector('img'); 
-      - img.previousElementSibling; 
-        <h1 style=​"color:​ green;​ background-color:​ yellow;​">​Spider Man​</h1>​
-      - img.previousElementSibling.style; 
-        CSSStyleDeclaration {0: 'color', 1: 'background-color', accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}
-      - img.previousElementSibling.style.color = "green"; 
-        'green'
-    
-*11. Adding Elements in the documents :
-     let newP = document.createElement('p'); 
-     console.dir(newP); 
-     >p
-      - newP.innerText = 'hi i am new p'; 
-        'hi i am new p'
-
-    i:appendChild(element)
-      - let body = document.querySelector('body'); 
-        body.appendChild(newP); 
-        <p>​hi i am new p​</p>​
-      - btn.innerText = "click me!";
-          'click me!'
-      - box.appendChild(btn);
-        <button>click me​</button>​
-      
-           
-    ii: append(element) : Mostly prefer append for add element instead of appendChild
-        using this we can add new content OR Elements. 
-      - newP.append(btn); 
-      - newP.append("do not click this button"); 
-       
-    iii: Create Element : 
-        - let btn = document.createElement('button'); 
-          undefined
-        - console.dir('btn'); 
-          btn
-        - console.dir(btn); 
-          button
-
-    iii: Prepend(element)
-         box.prepend(newP); // this will add before the box
-
-    iv: insertAdjacent(where, element)
-      - here paragraph will move afterbegin, afterend, beforebigin, beforeend,
-        let p = document.querySelector('p'); 
-       
-      - p.insertAdjacentElement('beforebegin', btn); 
-        <button>​NEW BUTTON !!!​</button>
-      - p.insertAdjacentElement('afterbegin', btn); 
-        <button>​NEW BUTTON !!!​</button>​
-      - p.insertAdjacentElement('beforeend', btn); 
-        <button>​NEW BUTTON !!!​</button>​
         
-*11. Removing Elements :
-      - removeChild(element) 
-      - remove(element)
-
-      ex: p.remove(); 
 */
-
-/* -----------------------------------------------   
+/*
 let smallImages = document.getElementsByClassName("oldImg"); 
 
 for(let i = 0; i<smallImages.length; i++){
@@ -279,11 +113,11 @@ for(let i = 0; i<smallImages.length; i++){
 console.dir(document.getElementsByTagName("p")); 
 
 
-//* Select single elements using querySelector : 
+// Select single elements using querySelector : 
 console.dir(document.querySelector('h1')); 
 console.dir(document.querySelector("div a")); // a(anchor tag)
 
-//* selects All elements 
+// selects All elements 
 console.dir(document.querySelectorAll("div a"));
 
 
@@ -299,11 +133,8 @@ img.getAttribute('id');
 // to change the id val. can change of getAttr--> id, class, src and more 
 img.setAttribute('id', 'spidermanImg');// kisi bhi object ke liye ek specific attribute ki value hame de deta hai 
 img.setAttribute('src', './creation_3.');
-
-
 */ 
-// Manipulating style
-/* 
+// Manipulating style 
 let img1 = document.querySelector('img'); 
 console.dir(img1); 
 
@@ -321,79 +152,9 @@ console.dir(heading);
 let links = document.querySelectorAll('.box a'); 
 
 for(link of links ){
-  link.style.color = "red"; //inline css
+  link.style.color = "red"; 
 }
 
 for(let i=0; i<links.length; i++){
     links[i].style.color = "green";
 }
-
-let box = document.querySelector('.box'); 
-*/ 
-
-// Practice Qs. 
-// Add the following elements to the container using only Javascript and the DOM methods. 
-
-// i: a <p> with red text that says "Hey I'm red!"
-let para1 = document.createElement("p"); 
-para1.innerText = "Hey I'm red!"; 
-document.querySelector("body").append(para1); 
-para1.classList.add("red"); 
-
-// ii: an <h3> with blue text that says "i'm a blue h3!"
-let h3 = document.createElement("h3"); 
-h3.innerText = "I'm a blue h3!"; 
-document.querySelector("body").append(h3); 
-
-h3.classList.add("blue"); 
-
-// iii: a <div> with a black border and pink background color with the follwoing elements inside of it: 
-let div = document.createElement("div"); 
-let h1 = document.createElement("h1"); 
-let para2 = document.createElement("p"); 
-
-h1.innerText = "Hi I'm div"; 
-para2.innerText = "ME TOO!"; 
-
-div.append(h1); 
-div.append(para2); 
-div.classList.add("box"); 
-document.querySelector("body").append(div);  
-
-// Assignment question -----------------
-// Question 1 : create a new input and button on the page using javaScript only. Set the text of button to "click me". 
-
-let button = document.createElement("button");
-let input  = document.createElement("input"); 
-button.innerText = "Hi i am button";
-
-document.querySelector("body").append(button); 
-document.querySelector("body").append(input); 
-
-
-/* Question 2 : 1) Change placeholder value of input to "username"
-             2) Change the id of button to "btn"  */ 
-
-input.setAttribute("placeholder", "username");
-button.setAttribute("id", "btn");  
-
-/* Q3. Access the btn using the querySelector and button id. Change the button background color to blue and text color to white. 
-*/
-let btn = document.querySelector("#btn"); 
-btn.classList.add("btnStyle"); 
-
-/* Q4 : Create an h1 element on the page and set its text to "DOM Practice"underlined. Change its color to purple. 
-*/ 
-
-let h = document.createElement("h1"); 
-h.innerText = "DOM Practice";
-h.classList.add("addUnd");
-document.querySelector("body").append(h);  
-
-let p1 = document.createElement("p"); 
-p1.innerText = " ApnaCollege <b> Delta</b> Practice"; 
-p1.classList.add("boldT"); 
-
-document.querySelector("body").append(p1); 
-
-

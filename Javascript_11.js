@@ -1,85 +1,92 @@
-/* 
-*JavaScript chapter 11 (Mini Project): 
+/*
+*CH-11: Javascript : Asynchronous Nature of JavaScript(advance-topic) -
 
-*1 : Event Bubbling : 
-    - in HTML for the diff-different element we create multiple events that called event Bubbling.
+*1: Visualizing the call Stack 
+        
+*1: JS Call Stack & breakpoint :
+    - we use break Point to see function calling of callstack. It predict step by step
+    - steps to open[open html document->browser->inspect->sources
+                    -> choose folder->breakPoint(in the code choose a aline)
+                    -> refresh page->screen visualize debugging-> there a four options upon choose(one next)
+                    -> reflect changes on CallStack execution step-by-step ]
 
-    *examle: 
-        let div = document.querySelector("div"); 
-        let ul = document.querySelector("ul"); 
-        let lis = document.querySelectorAll("li"); 
+        - Stack is dataStructure LIFO
+        - Example Books each opon :  
 
-        div.addEventListener("click", function(){
-            console.log("div was clicked"); 
-        });
-
-        ul.addEventListener("click", function(event){
-            event.stopPropagation(); 
-            console.log("ul was clicked"); 
-        });
-
-        for(li of lis){
-            li.addEventListener("click", function(event){
-                event.stopPropagation(); 
-                console.log("li as clicked"); 
-            });
+        function one(){
+            return 1; 
+        }
+        
+        function two(){
+            return one() + one(); 
         }
 
-*2: Building Todo with DOM :
-
-    *i: using this just remove existing elements not new
-        let delBtns = document.querySelectorAll(".delete"); 
-        for(delBtn of delBtns){
-            delBtn.addEventListener("click", function(){
-                let par = this.parentElement; 
-                console.log(par); 
-                // this not work for new element to delete just e
-                par.remove();
-            });
+        function three(){
+            let ans = two() + one(); 
+            console.log(ans);
         }
 
-    *ii : Event Delegation : 
-        - this use to delete new elements and existing elements remove  
-        - using bubbling phenomena we do Event Deligation.
+    *ii: Breakpoints : Uses for debugging
+        if we have large code and we have to See a line that line how's execute then we use Breakpoints
 
-*/ 
-// building to do with dom 
+*2: Javascript Single Threaded nature 
+        - programming langauge two type -
+        i) single threaded
+            javascript : javascript at one time just do one task
+                        its called asynchronous.
 
-let btn = document.querySelector("button"); 
-let ul = document.querySelector("ul"); 
-let input = document.querySelector("input"); 
+                asynchronously execution time we faced some problems 
+                to avoid these problems those problems in this chapter we will learn about it. 
 
-btn.addEventListener("click", function(){
-    let item = document.createElement("li"); 
-    item.innerText = input.value; 
-    
-    let delBtn = document.createElement("button"); 
-    delBtn.innerText = "delete"; 
-    delBtn.classList.add("delete"); 
 
-    item.appendChild(delBtn); 
-    ul.appendChild(item); 
-    input.value = ""; 
-});
+        ii) multithreaded
 
-ul.addEventListener("click", function(event){
-    // console.dir(event.target.nodeName); 
-    if(event.target.nodeName == "BUTTON"){
-        let listItem = event.target.parentElement; 
-        listItem.remove(); 
-        console.log("deleted"); 
-    }
-});
-/* //*this not work for new element to delete.
+        ii) api : take request and send response 
+            setTimeout done by browser. browser save code in js CallStack or after end time it execute
 
-let delBtns = document.querySelectorAll(".delete"); 
-for(delBtn of delBtns){
-    delBtn.addEventListener("click", function(){
-        let par = this.parentElement; 
-        console.log(par);
+*2: Problems occure asynchronously while we programme in js 
+!i : Callback Hell : 
 
-        par.remove();
-    });
-}
+
 */
 
+const { h1 } = require("framer-motion/client");
+
+/*
+// Call stack 
+function one(){
+    return 1; 
+}
+
+function two(){
+    return one() + one(); 
+}
+
+function three(){
+    let ans = two() + one(); 
+    console.log(ans);
+}
+
+three(); 
+
+
+// single thread 
+
+setTimeout(() =>{
+    console.log("jay hind"); 
+}, 2000); 
+
+setTimeout(() =>{
+    console.log("Hello world"); 
+}, 2000); 
+
+console.log("hello..."); 
+*/ 
+
+//callBack hell : 
+
+h1 = document.querySelector("h1"); 
+
+setTimeout(() => {
+    h1.style.color = "red"; 
+}, 1000);

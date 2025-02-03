@@ -117,7 +117,7 @@
          is crucial; use regular functions instead. Arrow functions 
          are ideal for preserving lexical this in nested scopes.
         
-        *- Example
+         *- Example
         const student3 = {
             name: "aman",
             marks: 95,

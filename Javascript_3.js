@@ -15,11 +15,12 @@
       'Hello' 
       msg ==> 
       ' Hello ' 
+
       output : Hello but value of msg remains same. 
 
    *ii: Strings are Immutable in js : 
         - No changes can be made to strings. 
-        Whenever we do try to make change, a new string created and old one remains same. 
+        Whenever we do try to make a change, a new string is created and old one remains same. 
 
    *iii: let str = "Random string"; 
         str.toUpperCase() "RANDOM STRING"
@@ -95,9 +96,8 @@
        fruits[10] = "papaya" ;
        fruits with length 11. 
        op :  ['orange', 'apple', 'banana', empty × 7, 'papaya']
-  
-  
-*4: Methods :
+
+     *Methods :
           *Push : add to end 
                let cars = ["audi", "suv", "maruti", "bmw"]; 
                cars.push("toyota"); 
@@ -151,7 +151,7 @@
         let colors = ['red', 'yellow', 'blue', 'orange', 'green', 'violet'];
           colors.slice(-1) // Op: violet
           colors.slice(1) // Op: red
-          colors.slice(1, 3) // Op: 'yellow', 'blue', 'orange'
+          colors.slice(1, 3) // Op: 'yellow', 'blue'
 
      *v: splice(): - changes in original array -- 
      removes / replaces / add elements in place 
@@ -200,6 +200,7 @@
           false
           [] === []
           false
+
      *ix: Nested Array(Multidimensional Array): Array of arrays :
           let nums = [2, 4]
           let nums = [   [1, 2],     [3, 4],    [4, 5]  ]; 

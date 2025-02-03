@@ -177,20 +177,22 @@ for(let i=1; i<=3; i++){
         console.log(j); 
         j = j+2; 
     }
-*/ 
-/*
-    favMovie
-    let favMovie = "avatar"; 
-    let guess = prompt("guess my fav Movie ")
-    while((guess != favMovie) && (guess != 'quit')){
-        console.log('wrong guess'); 
-        guess = prompt("Try again, wring gues "); 
-    
-    if(guess == favMovie){
-        console.log("Congrats! yahi karlo dinbhar"); 
-    }else{
-        console.log("Nahi khelna bhau..");
-    }
+
+
+    // favMovie
+    // let favMovie = "avatar"; 
+    // let guess = prompt("guess my fav Movie "); 
+
+    // while((guess != favMovie) && (guess != 'quit')){
+    //     console.log('wrong guess'); 
+    //     guess = prompt("Try again, wring gues "); 
+    // }
+
+    // if(guess == favMovie){
+    //     console.log("Congrats! yahi karlo dinbhar"); 
+    // }else{
+    //     console.log("Nahi khelna bhau..");
+    // }
 
 while(i <= 5){
     if(i== 3){

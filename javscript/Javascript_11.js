@@ -41,49 +41,35 @@
     *ii : Event Delegation : 
         - this use to delete new elements and existing elements remove  
         - using bubbling phenomena we do Event Deligation.
-        
-        ul.addEventListener("click", function(event){
-    // console.dir(event.target.nodeName); 
-        if(event.target.nodeName == "BUTTON"){
-            let listItem = event.target.parentElement; 
-            listItem.remove(); 
-            console.log("deleted"); 
-        }
-    });
 
-*3: Complete toDo List Code
-
-    let btn = document.querySelector("button"); 
-    let ul = document.querySelector("ul"); 
-    let input = document.querySelector("input"); 
-
-    btn.addEventListener("click", function(){
-        let item = document.createElement("li"); 
-        item.innerText = input.value; 
-        
-        let delBtn = document.createElement("button"); 
-        delBtn.innerText = "delete"; 
-        delBtn.classList.add("delete"); 
-
-        item.appendChild(delBtn); 
-        ul.appendChild(item); 
-        input.value = ""; 
-    });
-
-    ul.addEventListener("click", function(event){
-        // console.dir(event.target.nodeName); 
-        if(event.target.nodeName == "BUTTON"){
-            let listItem = event.target.parentElement; 
-            listItem.remove(); 
-            console.log("deleted"); 
-        }
-    });
-
-*4 : Simon Game Mini Project (folder-> jsProjectRelated)------
-
-*
 */ 
+// building to do with dom 
 
+let btn = document.querySelector("button"); 
+let ul = document.querySelector("ul"); 
+let input = document.querySelector("input"); 
+
+btn.addEventListener("click", function(){
+    let item = document.createElement("li"); 
+    item.innerText = input.value; 
+    
+    let delBtn = document.createElement("button"); 
+    delBtn.innerText = "delete"; 
+    delBtn.classList.add("delete"); 
+
+    item.appendChild(delBtn); 
+    ul.appendChild(item); 
+    input.value = ""; 
+});
+
+ul.addEventListener("click", function(event){
+    // console.dir(event.target.nodeName); 
+    if(event.target.nodeName == "BUTTON"){
+        let listItem = event.target.parentElement; 
+        listItem.remove(); 
+        console.log("deleted"); 
+    }
+});
 /* //*this not work for new element to delete.
 
 let delBtns = document.querySelectorAll(".delete"); 
@@ -96,5 +82,4 @@ for(delBtn of delBtns){
     });
 }
 */
-
 

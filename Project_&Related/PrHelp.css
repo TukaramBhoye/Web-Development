@@ -1,0 +1,31 @@
+/* Chapter:13 : MIniProject  */
+
+/* 
+*1 Color Theory : 
+
+*2: Typography : Style & appearance of Text
+    i: font family 
+        sans-serif 
+        serif 
+        monospace 
+        cursive 
+        fantasy
+
+*3: Google Fonts : 
+        https://fonts.google.com 
+
+*4: Icon's : 
+    Free icons site :i: google font -> incons
+                    :ii:  Font Awesome  --> cdnjs.com -->copy_link Of librari
+                        then--> font Awesome --> choose icone 
+
+*5: Hamberger Menu : side वाला थ्री vertical 
+                    लाइन ना बोलतात 
+*/
+
+h1{
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+}

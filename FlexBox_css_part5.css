@@ -1,0 +1,174 @@
+/*Chapter 11: FlexBox_css_part5: --------------------- */
+
+/*
+*1:  What is Flexbox? 
+    Flexbox Box Layout
+    It is one dimensional layout method for arranging items in rows or columns. 
+
+    The Flex Model : imagine himself this things
+
+                |           drection = row
+                |
+                | 
+                | 
+                | 
+        ________|____________________  main axis :  जर colum च्या डायरेक्शन मध्ये flex box
+                |                                   प्रॉपर्टीज दिल्या तर हा main axis बनेल.
+                | 
+                | 
+                cross axis
+                जर colum च्या डायरेक्शन मध्ये flex box प्रॉपर्टीज दिल्या तर 
+                हा main axis बनेल.
+
+*2: Flexbox Direction : It sets how flex items are placed in the flex container, 
+    along which axis and direction. 
+
+    - flexbox - direction: rwo;   --> main axis, left to right
+    - flexbox-direction: row-reverse; -->main axis, right to left
+    - flexbox-direction : column; --> main axis, top to bottom 
+    - flexbox-direction: column-reverse; main axis, bottom to top 
+
+*3: Justify Content : 
+    - Tells how the browser distributes space between and around content items along the main-axis
+    
+    - justify-content: flex-start; 
+    - justify-content: flex-end; 
+    - justify-content: center;
+
+
+    ----For spaces :---------------------
+    - justify-content: space-between; 
+    - justify-content: space-around; 
+    - justify-content: space-evenly;
+
+*4: Flex Wrap : 
+    - Sets whether flex items are forced onto one line or can wrap onto multiple lines 
+    
+    - flex-wrap: nowrap; 
+    - flex-wrap: wrap; 
+    - flex-wrap: wrap-reverse; 
+
+
+*5: Align Items : 
+    Distributes our items along the cross axis 
+
+    - align-items: flex-start;
+    - align-items: flex-end;
+    - align-items: center; 
+    - align-items: baseline; 
+
+*6: Align Content: 
+    It sets the distribution of space between and around content items along a flexbox's cross-axis
+    - align-content: flex-start/flex-end/center
+    - align-content: space-between/space-around/evenly
+    - align-content: baseline; 
+
+
+*7: Align Self : This uses for individual property (higher priority) ;
+    Align an item along the cross axis 
+    - align-self: flex-start; 
+    - align-self: flex-end; 
+    - align-self: flex-center; 
+    - align-self: ceneter; 
+    - align-self: baseline; 
+
+*8: Flex Sizing : flex-basis: आपण कंटेंट चा मैन साइज कमी जास्त करू शकतो  
+    It sets the initial main size of a flex item.
+    flex-basis: 100px; 
+
+    i: flex-grow : It specifies how much of the flex container's remaining space should be 
+                   assigned to the flex item's main size
+
+                   flex-grow:1 
+
+*9: Flex ShortHand : 
+    i: flex-grow | flex-shrink | flex-basis
+        flex: 2 2 100px;
+
+    ii: flex-grow | flex-basis
+        flex:  2 100px; 
+
+    iii: flex-grow(unitless)
+        flex: 2; 
+
+    iv: flex-basis
+        flex:100px; 
+    
+
+*/
+
+/* #container{
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black; 
+    display: flex;     // direction row is bydefault
+    // flex-direction: column;   
+     flex-direction: row;   
+    flex-direction: row-reverse;
+    flex-direction: column-reverse; // 
+ 
+    //-----justify---- //
+    justify-content: flex-start;
+    justify-content: center;
+
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+} */
+
+#container{
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+   /* flex-wrap: nowrap;// by deafault nowrap already// 
+    flex-wrap: wrap-reverse;  */
+
+    /* justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-items: flex-end; */
+    /* align-items: baseline; text comes in same line  */
+
+    align-content: flex-start;
+}
+
+#org{
+    /* -- more priority : 
+    align-self: flex-start;  */
+    align-self: flex-start; 
+    /* align-self: center;  */
+    /* flex-basis: 50px; */
+    flex-grow: 1; /*useful for navigation */
+    flex: 2 2 100px; 
+}
+
+#blue{
+    /* flex-basis: 400px; */
+    flex-grow: 2; 
+    max-width: 400px;
+}
+
+h1{
+    text-align: center;
+}
+
+#container div{
+    height: 100px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+/* --Assignment: --Flexbox_css_part5: -------------------------------------------------- */

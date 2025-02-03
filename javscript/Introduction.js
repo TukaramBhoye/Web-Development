@@ -33,7 +33,7 @@ Chapter 1: Javascript Part 1
      |___|__23_|      |_tony-stark_| 
 
        
-        a = 10           |  name = tukaram <---------ERROR
+        a = 10           |  name = tukara <---------ERROR
         10               |  name="tukaram"
         b = 5            |  'tukaram'  
         5                |  -----Reuse variable 

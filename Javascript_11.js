@@ -48,6 +48,8 @@
 !i : Callback Hell : 
 
 
+*3: Promises 
+    The Promise object represents the eventual completion (or Failure) of an asynchronous operation and its resulting vlaue. 
 */
 /*
 // Call stack 
@@ -87,3 +89,51 @@ h1 = document.querySelector("h1");
 setTimeout(() => {
     h1.style.color = "red"; 
 }, 1000);
+
+setTimeout(() => {
+    h1.style.color = "orange"; 
+}, 2000);
+
+setTimeout(() => {
+    h1.style.color = "green"; 
+}, 3000);
+
+
+// to implement better this(previous) three functions 
+function changeColor(color, delay){
+    setTimeout(() => {
+        h1.style.color = color;
+    }, delay) ;
+}
+
+// Not Good Way to Call --> to show Dependnecy we Use in this Callbacks in Previos function --> nextColorCahnge()
+changeColor("red", 1000); 
+changeColor("range", 2000); 
+changeColor("green", 3000); 
+
+
+function changeColor(color, delay, nextColorCahnge){
+    setTimeout(() => {
+        h1.style.color = color;
+        if(nextColorCahnge) nextColorCahnge(); 
+    }, delay) ;
+}
+
+// call backs nesting ------- 
+changeColor("red", 1000, () => {
+    changeColor("orange", 1000, () => {
+        changeColor("green", 1000, () => {
+            changeColor("yellow", 1000, () =>{
+            });
+        });
+    });
+}); 
+/* in the previous code happning nesting. 
+ - this type of program's comes multiple time in programming 
+  in situation like where we call api's, data want to add in database 
+- also known as callback hell in it comes in large code when we work in asynchronously in javaScript it occure.
+- call back hell comes when we call multiple nested functions as previous example. 
+
+*/
+
+

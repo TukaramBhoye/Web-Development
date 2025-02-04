@@ -49,9 +49,6 @@
 
 
 */
-
-const { h1 } = require("framer-motion/client");
-
 /*
 // Call stack 
 function one(){

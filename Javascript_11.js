@@ -190,6 +190,47 @@
 
      *vi : Let's apply Promises to our callback hell. 
 
+      with three states : pending, fullfilled, reject
+
+        h1 = document.querySelector("h1");
+        function changeColor(color, delay) {
+            new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    h1.style.color = color;
+                    resolve("color changed!"); 
+                }, delay);
+            });
+        }
+
+        changeColor("red", 1000)
+        .then(() =>{
+            console.log("red color was completed"); 
+            return changeColor("orange", 1000); 
+        })
+        .then(() => {
+            console.log("orange color was completed");
+            return changeColor("green", 1000); 
+        })
+        .then(() => {
+            console.log("green color was completed"); 
+            return changeColor("blue", 1000); 
+        })
+        .then(() =>{
+            console.log("orange color was completed"); 
+        })
+
+        //* previous code is better than this code------
+
+        changeColor("red", 1000, () => {
+            changeColor("orange", 1000, () => {
+                changeColor("green", 1000, () => {
+                    changeColor("yellow", 1000, () => {
+                        changeColor("blue", 1000);
+                    });
+                });
+            });
+        });
+        
 
 */
 
@@ -222,7 +263,7 @@ setTimeout(() =>{
 }, 2000); 
 
 console.log("hello..."); 
-*/ 
+*/
 
 
 //callBack hell : 
@@ -270,7 +311,7 @@ changeColor("red", 1000, () => {
             });
         });
     });
-}); */ 
+}); */
 /* in the previous code happning nesting. 
  - this type of program's comes multiple time in programming 
   in situation like where we call api's, data want to add in database 
@@ -327,9 +368,9 @@ savetoDb(
         console.log("failure1: weak connection"); 
     }
 );
-*/ 
+*/
 // return Promise
-
+/*
 function savetoDb(data) {
     return new Promise((resolve, reject) => {
         let internetSpeed = Math.floor(Math.random() * 10) + 1; 
@@ -340,7 +381,7 @@ function savetoDb(data) {
         }
     });
 }
-
+*/
 // first way : 
 /*
 let request = savetoDb("apna college") ;
@@ -351,7 +392,7 @@ let request = savetoDb("apna college") ;
  .catch(() => {
     console.log("Promise was rejected");
  })
-    */ 
+    */
 /*
 //*second Way 
 function savetoDb(data){
@@ -364,7 +405,7 @@ function savetoDb(data){
         }
     })
 }
-*/ 
+*/
 //*Promise chaining a Improve version :
 /*
 savetoDb("apna collage")
@@ -380,7 +421,7 @@ savetoDb("apna collage")
     .catch(() => {
         console.log("promise was rejected"); 
     });
-*/ 
+*/
 
 //the situation comes multiple time in programming like call to api's and where promises save succesfully one after one squence wise 
 /*
@@ -404,5 +445,56 @@ savetoDb("apna collage")
         console.log("promise was rejectd"); 
         console.log(error); 
     })
+*/
+/*
+h1 = document.querySelector("h1"); 
+function changeColor(color, delay, nextColorCahnge){
+    setTimeout(() => {
+        h1.style.color = color; 
+        if(nextColorCahnge) nextColorCahnge(); 
+    }, delay); 
+}
+*/
+
+// previous code convert into Promises code 
+// with three states : pending, fullfilled, reject
+h1 = document.querySelector("h1");
+function changeColor(color, delay) {
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            h1.style.color = color;
+            resolve("color changed!"); 
+        }, delay);
+    });
+}
+
+changeColor("red", 1000)
+.then(() =>{
+    console.log("red color was completed"); 
+    return changeColor("orange", 1000); 
+})
+.then(() => {
+    console.log("orange color was completed");
+    return changeColor("green", 1000); 
+})
+.then(() => {
+    console.log("green color was completed"); 
+    return changeColor("blue", 1000); 
+})
+.then(() =>{
+    console.log("orange color was completed"); 
+})
+
+// previous code is better than this code------
+/*
+ changeColor("red", 1000, () => {
+     changeColor("orange", 1000, () => {
+         changeColor("green", 1000, () => {
+             changeColor("yellow", 1000, () => {
+                 changeColor("blue", 1000);
+             });
+         });
+     });
+ });
 
 */ 

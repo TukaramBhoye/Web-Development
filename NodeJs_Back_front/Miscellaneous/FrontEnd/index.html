@@ -1,0 +1,67 @@
+<!-- 
+*ch:35: FrontEnd & Backend : 
+        GET                | POST
+Used to GET some response  | Used to POST something(for Create/Write/Update)
+Data sent in query strings | Data sent via request body (any type of data)
+(limited, string data & visible in URL)
+
+*1: GET : 
+    <form method="get" action="/register">
+        <input placeholder="enter username" name = "user" type="text" />
+        <input placeholder="enter password" name="password" type="password" />
+        <button>Submit</button>
+    </form>
+
+  - Submit form -> /register(redirect page)
+    Output In URL Bar : file:///C:/register?user=tukaram&password=34897
+                          *  seen input data ----tukaram-↲----34897-↲ 
+    - We Seen here sensitive data in URL Bar. 
+
+*2: POST: 
+        - Used to POST something(for Create/Write/Update)
+        - Data sent via request body (any type of data).
+    
+        - currently our server exist in local system so, but we want work our server on "http" server.  
+    ex : action="http://localhost:8080/register">
+        
+        <form method="get" action="http://localhost:8080/register">
+            <input placeholder="enter username" name = "user" type="text" />
+            <input placeholder="enter password" name="password" type="password" />
+            <button>Submit</button>
+        </form>
+        <hr/>
+        <form method="POST" action="http://localhost:8080/register">
+            <input placeholder="enter username" name = "user" type="text" />
+            <input placeholder="enter password" name="password" type="password" />
+            <button>Submit</button>
+        </form>
+
+    
+
+       
+-->                            
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get & Post Requests</title>
+</head>
+<body>
+    <!-- <form method="get" action="http://localhost:8080/register">
+        <input placeholder="enter username" name = "user" type="text" />
+        <input placeholder="enter password" name="password" type="password" />
+        <button>Submit</button>
+    </form>
+    <hr/>
+    <form method="POST" action="http://localhost:8080/register">
+        <input placeholder="enter username" name = "user" type="text" />
+        <input placeholder="enter password" name="password" type="password" />
+        <button>Submit</button>
+    </form> -->
+
+    <!-- CH:35 miscellaneous  -->
+    <script src="./app.js"></script>
+
+</body>
+</html>

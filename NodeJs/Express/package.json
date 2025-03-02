@@ -1,0 +1,16 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "main": "Express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tukaram bhoye",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "package.json": "^2.0.1"
+  },
+  "keywords": [],
+  "description": ""
+}
